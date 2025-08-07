@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkIfUserIsLoggedIn();
 
   browseBtn.onclick = () => {
-    window.location.href = "../browse.html";
+    window.location.href = "../html/browse.html";
   };
 
   profileBtn.onclick = () => {
