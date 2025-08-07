@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.verification-container {
+  background-color: var(--main-background-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--main-color);
+  margin-bottom: 1.5rem;
+}
+
+.email-display {
+  font-weight: bold;
+  color: var(--main-color);
+  margin: 1rem 0;
+  word-break: break-all;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  gap: 10px;
+}
+
+.code-input {
+  width: 50px;
+  height: 60px;
+  text-align: center;
+  font-size: 24px;
+  border: 2px solid var(--main-color);
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: rgba(17, 15, 48);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.verify-button {
+  background-color: rgba(17, 15, 48, 0.555);
+  color: var(--main-color);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.verify-button:hover {
+  background-color: rgba(17, 15, 48);
+}
+
+.resend-section {
+  margin-top: 1.5rem;
+  color: var(--main-color);
+}
+
+#resendLink {
+  color: #3498db;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#resendLink:hover {
+  text-decoration: underline;
+}
+
+#countdown {
+  font-weight: bold;
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-top: 1rem;
+  display: none;
+}
+
+.success-message {
+  color: #27ae60;
+  margin-top: 1rem;
+  display: none;
+}

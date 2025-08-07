@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AniNavi</title>
+        <link rel="stylesheet" href="../css/globals.css">
+        <link rel="stylesheet" href="../css/register.css">
+    </head>
+    <body>
+        <div class="header">
+            <div class="headerSection left">
+                <img id="logo" src="../imgs/logo.png">
+            </div>
+    
+            <div class="headerSection center">
+                <button class="headerBtn hide" id="profileBtn">Profile</button>
+                <button class="headerBtn" id="browseBtn">Browse</button>
+            </div>
+    
+            <div class="headerSection right">
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <form id="signUpForm">
+                <h1>Sign Up to AniNavi</h1>
+                <div class="formGroup">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" id="registerBtn">Create Account</button>
+            </form>
+            <p class="loginPrompt">Already have an account? 
+                <a href="login.html">Log In</a>
+            </p>
+        </div>
+        
+        <script src="../js/global.js"></script>
+        <script src="../js/register.js"></script>
+    </body>
+</html>

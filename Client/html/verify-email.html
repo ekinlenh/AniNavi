@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Your Email | AniNavi</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/verify-email.css">
+</head>
+<body>
+    <div class="verification-container">
+        <h1>Verify Your Email</h1>
+        <p>We've sent a 6-digit verification code to:</p>
+        <div class="email-display" id="userEmail"></div>
+        
+        <form id="verificationForm">
+            <div class="code-inputs">
+                <input type="text" maxlength="1" class="code-input" data-index="0" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" data-index="1" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" data-index="2" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" data-index="3" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" data-index="4" inputmode="numeric" pattern="[0-9]*">
+                <input type="text" maxlength="1" class="code-input" data-index="5" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            
+            <input type="hidden" id="email">
+            
+            <button type="submit" class="verify-button">Verify Email</button>
+            
+            <div class="error-message" id="errorMessage"></div>
+            <div class="success-message" id="successMessage"></div>
+        </form>
+        
+        <div class="resend-section">
+            <p>Didn't receive a code? <span id="resendContainer">
+                <a id="resendLink">Resend code</a>
+            </span></p>
+        </div>
+    </div>
+
+    <script src="../js/verify-email.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniNavi</title>
+    <link rel="stylesheet" href="../css/globals.css">
+    <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+    <div class="header">
+        <div class="headerSection left">
+            <img id="logo" src="../imgs/logo.png">
+        </div>
+        <div class="headerSection center">
+            <button class="headerBtn hide" id="profileBtn">Profile</button>
+            <button class="headerBtn" id="browseBtn">Browse</button>
+        </div>
+        <div class="headerSection right">
+
+        </div>
+    </div>
+
+    <div class="displayContainer">
+        <div class="pageContent">
+            <div class="profile-container">
+                <div class="profile-info">
+                    <img id="profilePicture" src="../imgs/profile.png" alt="Profile Picture">
+                    <div class="profile-details">
+                        <h1 id="profileName">User</h1>
+                        <p id="profileBio">About Me
+                        </p>
+                    </div>
+                    <div class="profile-actions">
+                        <button id="editProfileBtn" onclick="openPopup()">Edit Profile</button>
+                        <button id="logoutBtn" onclick="logout()">Log Out</button>
+                    </div>
+                </div>
+                <!-- 
+                TBD: Uncomment when statistics are implemented
+                <div class="profile-section">
+                    <h2>Statistics</h2>
+                    <p><strong>Anime Watched:</strong> <span id="animeWatched">0</span></p>
+                    <p><strong>Anime Completed:</strong> <span id="animeWatched">0</span></p>
+                </div> 
+                -->
+                <div class="profile-section">
+                    <h2>Watchlist</h2>
+                    <div class="watchlist-items" id="watchlistContainer">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-overlay" id="profilePopup">
+        <div class="popup-content">
+            <button class="close-btn" onclick="closePopup()">X</button>
+            <h2>Edit Profile</h2>
+            
+            <div class="edit-box">
+                <div class="edit-section">
+                    <h3>Profile Display</h3>
+                    <label>Profile Picture</label>
+                    <div class="file-upload-container">
+                        <div class="preview-container">
+                            <img id="profilePreview" src="../imgs/profile.png" alt="Profile Preview">
+                            <button class="remove-photo-btn" id="removePhotoBtn" onclick="removePhoto()">X</button>
+                        </div>
+                        <label class="file-upload-btn">
+                            <input type="file" id="profilePictureUpload" accept="image/*">
+                            Choose Image
+                    </label>
+                </div>
+
+                    <label for="profileDescription">Description</label>
+                    <textarea id="profileDescription" placeholder="Enter profile description"></textarea>
+                </div>
+                <div class="edit-section">
+                    <h3>Profile Info</h3>
+                    <label for="username">Username</label>
+                    <input id="username" type="text" placeholder="Username">
+                    <label for="email">Email</label>
+                    <input id="email" type="text" placeholder="Email">
+                    <label for="password">Password</label>
+                    <input id="password" type="text" placeholder="New password">
+                </div>
+            </div>
+            
+            <div class="actionButtons">
+                <button class="cancelBtn" onclick="closePopup()">Cancel</button>
+                <button class="saveBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/global.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/mediaDisplay.js"></script>
+</body>
+</html>
