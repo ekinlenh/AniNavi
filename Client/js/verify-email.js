@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:8080/api/auth/verify', {
+            const response = await fetch('/api/auth/verify', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:8080/api/auth/resend', {
+            const response = await fetch('/api/auth/resend', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

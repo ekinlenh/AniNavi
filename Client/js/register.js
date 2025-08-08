@@ -28,7 +28,7 @@ if (signUpForm) {
 
 
             // creating account for user
-            const res = await fetch("http://localhost:8080/api/auth/signup", {
+            const res = await fetch("/api/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -82,7 +82,7 @@ if (loginForm) {
 
         console.log(formData);
 
-        const res = await fetch("http://localhost:8080/api/auth/login", {
+        const res = await fetch("/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

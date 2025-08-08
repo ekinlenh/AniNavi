@@ -23,14 +23,14 @@ if (addToListBtn) {
     const authToken = localStorage.getItem("authToken");
 
     const response = await fetch(
-      "http://localhost:8080/api/users/me/uploadMedia",
+      "/api/users/me/uploadMedia",
       {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${authToken}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(animeData),
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${authToken}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(animeData),
       }
     );
 
