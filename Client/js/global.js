@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function checkIfUserIsLoggedIn() {
     
     try {  
-      const response = await fetch("/api/users/validated", {
+      const response = await fetch("aninavi.vercel.app/api/users/validated", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
