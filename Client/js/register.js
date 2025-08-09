@@ -28,7 +28,7 @@ if (signUpForm) {
 
 
             // creating account for user
-            const res = await fetch("aninavi.vercel.app/api/auth/signup", {
+            const res = await fetch("http://localhost:8080/api/auth/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
