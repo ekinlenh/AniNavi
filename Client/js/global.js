@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const token = localStorage.getItem("authToken");
       
-      const profileResponse = await fetch("/api/users/me", {
+      const profileResponse = await fetch("https://aninavi-server.onrender.com/api/users/me", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
