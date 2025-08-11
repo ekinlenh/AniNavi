@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resendContainer = document.getElementById('resendContainer');
     
     if (!email) {
-        window.location.href = '/signup.html';
+        window.location.href = '..html/signup.html';
         return;
     }
     
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sessionStorage.removeItem('emailForVerification');
                 
                 setTimeout(() => {
-                    window.location.href = '/login.html';
+                    window.location.href = '..html/login.html';
                 }, 1500);
             } else {
                 const errorData = await response.json();
