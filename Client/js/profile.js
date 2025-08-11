@@ -73,7 +73,7 @@ async function loadUserData() {
   try {
     const token = localStorage.getItem("authToken");
 
-    const response = await fetch("http://localhost:8080/api/users/me", {
+    const response = await fetch("https://aninavi-server.onrender.com/api/users/me", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -123,7 +123,7 @@ async function saveProfileData() {
     const token = localStorage.getItem("authToken");
 
     const response = await fetch(
-      "aninavi.vercel.app/api/users/me/uploadInfo",
+      "https://aninavi-server.onrender.com/api/users/me/uploadInfo",
       {
         method: "POST",
         headers: {
@@ -202,7 +202,7 @@ async function removeFromWatchlist(animeId) {
     const token = localStorage.getItem("authToken");
 
     const response = await fetch(
-      "aninavi.vercel.app/api/users/me/removeMedia",
+      "https://aninavi-server.onrender.com/api/users/me/removeMedia",
       {
         method: "POST",
         headers: {
@@ -233,7 +233,7 @@ async function logout() {
   try {
     const token = localStorage.getItem("authToken");
 
-    const response = await fetch("/api/auth/logout", {
+    const response = await fetch("https://aninavi-server.onrender.com/api/auth/logout", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
