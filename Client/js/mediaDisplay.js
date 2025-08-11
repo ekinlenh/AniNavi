@@ -23,7 +23,7 @@ if (addToListBtn) {
     const authToken = localStorage.getItem("authToken");
 
     const response = await fetch(
-      "/api/users/me/uploadMedia",
+      "https://aninavi-server.onrender.com/api/users/me/uploadMedia",
       {
       method: "POST",
       headers: {
