@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resendContainer = document.getElementById('resendContainer');
     
     if (!email) {
-        window.location.href = '/signup.html';
+        window.location.href = '..html/signup.html';
         return;
     }
     
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         try {
-            const response = await fetch('http://localhost:8080/api/auth/verify', {
+            const response = await fetch('https://aninavi-server.onrender.com/api/auth/verify', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 sessionStorage.removeItem('emailForVerification');
                 
                 setTimeout(() => {
-                    window.location.href = '/login.html';
+                    window.location.href = '..html/login.html';
                 }, 1500);
             } else {
                 const errorData = await response.json();
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         try {
-            const response = await fetch('http://localhost:8080/api/auth/resend', {
+            const response = await fetch('https://aninavi-server.onrender.com/api/auth/resend', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

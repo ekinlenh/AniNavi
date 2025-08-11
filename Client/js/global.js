@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   checkIfUserIsLoggedIn();
 
   browseBtn.onclick = () => {
-    window.location.href = "../html/browse.html";
+    window.location.href = "../html/index.html";
   };
 
   profileBtn.onclick = () => {
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function checkIfUserIsLoggedIn() {
     
     try {  
-      const response = await fetch("http://localhost:8080/api/users/validated", {
+      const response = await fetch("https://aninavi-server.onrender.com/api/users/validated", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const token = localStorage.getItem("authToken");
       
-      const profileResponse = await fetch("http://localhost:8080/api/users/me", {
+      const profileResponse = await fetch("https://aninavi-server.onrender.com/api/users/me", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
